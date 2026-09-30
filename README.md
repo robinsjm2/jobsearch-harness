@@ -25,7 +25,7 @@ It is not a software project. It has no build system, test suite, or deployment 
 
 **Tyme** is the authoritative system for planned work, task status, and time tracking. Tasks live in Tyme. Sprint files in `~/.jobsearch/sprints/` hold the goals and context behind those tasks.
 
-**Gmail MCP** lets agents check job alerts and recruiter outreach. The [gmail-job-search](https://github.com/robinsjm2/agent-skills/blob/main/skills/gmail-job-search.md) skill filters those messages against `~/.jobsearch/job-criteria.md` and skips roles already listed in `~/.jobsearch/applications.md`.
+**Gmail MCP** lets agents check job alerts and recruiter outreach. The [gmail-job-search](https://github.com/robinsjm2/agent-skills/blob/main/skills/gmail-job-search/SKILL.md) skill filters those messages against `~/.jobsearch/job-criteria.md` and skips roles already listed in `~/.jobsearch/applications.md`.
 
 **agent-skills** holds the canonical skill definitions. `.kiro/skills/` here is a local copy.
 
