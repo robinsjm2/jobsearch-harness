@@ -1,0 +1,66 @@
+{
+  "mcpServers": {
+    "gmail": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/vinayak-mehta/gmail-mcp",
+        "--with",
+        "mcp<2",
+        "gmail-mcp"
+      ],
+      "env": {
+        "GMAIL_CREDS_PATH": "/path/to/your/gmail-credentials.json",
+        "GMAIL_TOKEN_PATH": "/path/to/your/gmail-token.json"
+      },
+      "disabled": false,
+      "autoApprove": []
+    },
+    "tyme": {
+      "command": "/Applications/Tyme.app/Contents/MacOS/tyme-mcp",
+      "env": {
+        "TYME_MCP_TOKEN": "YOUR_TYME_TOKEN_HERE"
+      },
+      "disabled": false,
+      "autoApprove": []
+    }
+  }
+}
+
+// -----------------------------------------------------------------------
+// SETUP INSTRUCTIONS
+// -----------------------------------------------------------------------
+//
+// 1. Copy this file to ~/.kiro/settings/mcp.json
+//    Do NOT put mcp.json inside this repo — it contains credentials.
+//
+// 2. Gmail setup:
+//    a. Create a Google Cloud project at https://console.cloud.google.com
+//    b. Enable the Gmail API (APIs & Services > Library > Gmail API)
+//    c. Create OAuth credentials (APIs & Services > Credentials >
+//       Create Credentials > OAuth client ID > Desktop application)
+//    d. Add yourself as a test user (OAuth consent screen > Test users)
+//    e. Download the credentials JSON and save it somewhere safe
+//       (e.g. ~/.kiro/gmail-credentials.json)
+//    f. Run the one-time auth command to generate your token:
+//
+//       uvx --from git+https://github.com/vinayak-mehta/gmail-mcp \
+//           --with "mcp<2" gmail-mcp auth \
+//           --creds-path /path/to/gmail-credentials.json \
+//           --token-path /path/to/gmail-token.json
+//
+//    g. Update GMAIL_CREDS_PATH and GMAIL_TOKEN_PATH above with your paths
+//
+// 3. Tyme setup:
+//    a. Open Tyme > Settings > AI & MCP
+//    b. Enable "Activate MCP Server"
+//    c. Copy the path and token shown there
+//    d. Update the command path and TYME_MCP_TOKEN above
+//    e. Requires Tyme 2026.9 or later
+//
+// 4. Personal data:
+//    mkdir -p ~/.jobsearch
+//    cp templates/job-criteria.md templates/applications.md ~/.jobsearch/
+//    Then edit ~/.jobsearch/job-criteria.md with your own criteria.
+//
+// -----------------------------------------------------------------------
