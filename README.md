@@ -10,6 +10,7 @@ This repository is a harness for running a job search as two-week sprints with A
 ~/Projects/agent-skills/                   — Reusable AI agent skills (e.g. gmail-job-search)
 Tyme                                       — Tasks + status + time tracking
 Gmail (via MCP)                            — Job alerts and recruiter outreach
+Indeed (via MCP)                           — Searching for new openings
 GitHub                                     — Source of truth for code
 ```
 
@@ -26,6 +27,8 @@ It is not a software project. It has no build system, test suite, or deployment 
 **Tyme** is the authoritative system for planned work, task status, and time tracking. Tasks live in Tyme. Sprint files in `~/.jobsearch/sprints/` hold the goals and context behind those tasks.
 
 **Gmail MCP** lets agents check job alerts and recruiter outreach. The [gmail-job-search](https://github.com/robinsjm2/agent-skills/blob/main/skills/gmail-job-search/SKILL.md) skill filters those messages against `~/.jobsearch/job-criteria.md` and skips roles already listed in `~/.jobsearch/applications.md`.
+
+**Indeed MCP** (a claude.ai connector) lets agents search for new openings. The [job-search-sweep](https://github.com/robinsjm2/agent-skills/blob/main/skills/job-search-sweep/SKILL.md) skill runs targeted searches, confirms remote status and pay from the full postings, and records each sweep in `~/.jobsearch/notes/sweeps/`.
 
 **agent-skills** holds the canonical skill definitions. `.kiro/skills/` here is a local copy.
 
