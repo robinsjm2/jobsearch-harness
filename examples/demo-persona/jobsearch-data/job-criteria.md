@@ -1,4 +1,4 @@
-# Job Search Criteria (DEMO PERSONA: Alex Rivera, fictional)
+# Job Search Criteria (DEMO PERSONA: Demo Candidate, fictional)
 
 Use this file when reviewing job postings, email alerts, or recruiter outreach. Explain the fit rather than producing a keyword score.
 

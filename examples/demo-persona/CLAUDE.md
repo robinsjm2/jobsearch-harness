@@ -1,6 +1,6 @@
 # Demo workspace: fictional job seeker (for recordings)
 
-This workspace demonstrates the jobsearch-harness skills with a **fictional persona, Alex Rivera**. Everything here is invented.
+This workspace demonstrates the jobsearch-harness skills with a **fictional persona, Demo Candidate**. Everything here is invented.
 
 - **Data directory:** use `./jobsearch-data/` (relative to this workspace) **instead of `~/.jobsearch/`** everywhere a skill mentions it.
 - **Never read or write `~/.jobsearch/`**, and never show the real user's personal data.

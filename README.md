@@ -55,7 +55,7 @@ CLAUDE.md                — Claude-specific instructions (defers to AGENTS.md)
 
 ## Demo Persona
 
-`examples/demo-persona/` contains a fictional job seeker (Alex Rivera) with criteria, a fact bank, a tracker, and a sample posting. Use it to try the skills, or to record demos, without real data. See `examples/demo-persona/DEMO.md`.
+`examples/demo-persona/` contains a fictional job seeker (Demo Candidate) with criteria, a fact bank, a tracker, and a sample posting. Use it to try the skills, or to record demos, without real data. See `examples/demo-persona/DEMO.md`.
 
 ## Personal Data Directory
 

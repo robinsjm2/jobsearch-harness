@@ -1,11 +1,11 @@
-# Resume Fact Bank (DEMO PERSONA: Alex Rivera, fictional)
+# Resume Fact Bank (DEMO PERSONA: Demo Candidate, fictional)
 
 Every claim in a tailored resume must trace to an entry here.
 
 ## Contact
 
-- Name: Alex Rivera
-- Email: alex.rivera@example.com
+- Name: Demo Candidate
+- Email: demo.candidate@example.com
 - Phone: (555) 010-0142
 - Location line: Boulder, CO · Remote
 

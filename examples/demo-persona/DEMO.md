@@ -1,6 +1,6 @@
 # Demo Persona and Recording Guide
 
-A fictional job seeker, **Alex Rivera**, for recording demos of the job-search skills without exposing anyone's real data. Every company, number, and contact detail here is invented.
+A fictional job seeker, **Demo Candidate**, for recording demos of the job-search skills without exposing anyone's real data. Every company, number, and contact detail here is invented.
 
 ## Set up
 
@@ -29,7 +29,7 @@ agg --speed 1.5 sweep.cast sweep.gif
 claude
 > /job-search-sweep
 ```
-Shows: targeted Indeed searches, full-posting checks for real remote status and pay, ratings against Alex's criteria, and a saved sweep record. Real public listings will appear; no personal data is involved.
+Shows: targeted Indeed searches, full-posting checks for real remote status and pay, ratings against the demo candidate's criteria, and a saved sweep record. Real public listings will appear; no personal data is involved.
 
 ### 2. Tailor a resume: `tailor-resume`
 
@@ -53,7 +53,7 @@ Shows: the tracker row with Status/Stage, and the lessons outcome log.
 ```
 > Check my email for job alerts and replies on my applications
 ```
-Shows: a job alert filtered against Alex's criteria (on-site, manager and below-floor roles dropped), a follow-up on an existing application (Tidewater technical interview, Action required), a confirmation, a form rejection (counted, tracker updated), and new recruiter outreach. All of it comes from the `demo-gmail` mock (`mocks/fixtures/emails.json`).
+Shows: a job alert filtered against the demo candidate's criteria (on-site, manager and below-floor roles dropped), a follow-up on an existing application (Tidewater technical interview, Action required), a confirmation, a form rejection (counted, tracker updated), and new recruiter outreach. All of it comes from the `demo-gmail` mock (`mocks/fixtures/emails.json`).
 
 ### 5. Sprint check: Tyme (mocked)
 
