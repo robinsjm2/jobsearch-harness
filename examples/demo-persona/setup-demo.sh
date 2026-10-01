@@ -13,6 +13,7 @@ if [ -e "$dest" ]; then
 fi
 mkdir -p "$dest"
 cp -R "$src/jobsearch-data" "$src/postings" "$src/mocks" "$src/CLAUDE.md" "$src/.claude" "$src/.mcp.json" "$dest/"
+mkdir -p "$dest/.recording" && cp "$src/recording/card.sh" "$dest/.recording/"
 # Approve only the two mock servers for this folder (local settings, never shared).
 cat > "$dest/.claude/settings.local.json" <<'JSON'
 {

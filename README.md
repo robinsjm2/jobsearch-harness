@@ -2,6 +2,18 @@
 
 This repository is a harness for running a job search as two-week sprints with AI agents. Tyme MCP handles tasks and time tracking. Gmail MCP handles job alerts and recruiter outreach. The harness defines the process: agent instructions, templates, and MCP setup. Your personal data (sprint plans, goals, criteria, application tracker) lives in a local directory outside the repo, so it can't be committed by accident.
 
+## See It in Action
+
+Recorded live in Claude Code using the fictional **Demo Candidate** profile in [`examples/demo-persona/`](examples/demo-persona/). The job listings are real, public Indeed results; email comes from a mock inbox.
+
+**Finding new jobs** with [`job-search-sweep`](https://github.com/robinsjm2/agent-skills/blob/main/skills/job-search-sweep/SKILL.md): targeted Indeed searches, full-posting checks for real remote status and pay, and ratings against the candidate's criteria.
+
+![job-search-sweep demo](docs/media/job-search-sweep.gif)
+
+**Checking on applications** with [`gmail-job-search`](https://github.com/robinsjm2/agent-skills/blob/main/skills/gmail-job-search/SKILL.md): follow-ups on tracked applications update their stage, a rejection missing from the tracker is detected and added, and recruiter outreach is rated against the criteria.
+
+![application status demo](docs/media/application-status.gif)
+
 ## Conceptual Model
 
 ```

@@ -21,6 +21,20 @@ agg --speed 1.5 sweep.cast sweep.gif
 
 `--idle-time-limit 2` caps pauses while Claude works. Aim for 30–60 seconds per clip. Re-create the workspace between takes (`rm -rf ~/Projects/jobsearch-demo && ./setup-demo.sh`) so each run starts clean.
 
+## Automated recording (VHS)
+
+`recording/` scripts the sweep and status clips with [VHS](https://github.com/charmbracelet/vhs), adding title and end cards that credit the author and label the profile as fictional:
+
+```bash
+brew install vhs
+./recording/record.sh sweep     # or: status
+```
+
+`record.sh` recreates the demo folder at `/Users/Shared/jobsearch-demo` (a path without your username), records the tape, and converts it to a GIF. Notes:
+- **Trust the folder once first.** Run `claude` there interactively and choose "Yes, I trust this folder". Because the folder pre-approves permissions, that prompt defaults to "No, exit", and the tapes assume it's already been accepted.
+- **Don't open the recorder's terminal in a browser.** VHS's terminal accepts a single viewer, and connecting can stall the recording.
+- **The tapes clear inherited `CLAUDE*` variables,** so a recording started from inside another Claude Code session looks like a normal launch.
+
 ## Clips
 
 ### 1. Find new jobs: `job-search-sweep`
