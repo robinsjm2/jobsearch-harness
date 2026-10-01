@@ -9,15 +9,21 @@ Track every application submitted. The agent uses this file to:
 
 Add a row when you submit an application. The agent can also add rows when you confirm a submission during a session.
 
-Status values: `Applied` | `Phone screen` | `Interview` | `Offer` | `Rejected` | `Withdrawn` | `No response`
+**Status** is the outcome so far:
+`Applied` (still active) | `Rejected` | `Closed by employer` | `Withdrawn` | `No response` | `Offer` | `Accepted`
+
+**Stage** is the furthest point the application reached. While it's active, that's where it is now; once it's closed, it's where it ended:
+`Submitted` → `Resume screen` → `Assessment` → `Recruiter screen` → `Technical interview` → `Final round` → `Offer`
+
+Add `(inferred)` to the stage when an email doesn't say it outright. For example, a form rejection with no interview implies `Resume screen (inferred)`. A rejection that mentions reviewing your resume is `Resume screen`; one that mentions assessment results is `Assessment`.
 
 ---
 
 ## Applications
 
-| Date | Company | Role | Source | Status | Notes |
-|------|---------|------|--------|--------|-------|
-| | | | | | |
+| Date | Company | Role | Source | Status | Stage | Notes |
+|------|---------|------|--------|--------|-------|-------|
+| | | | | | | |
 
 ---
 
