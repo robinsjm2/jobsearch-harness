@@ -30,6 +30,8 @@ It is not a software project. It has no build system, test suite, or deployment 
 
 **Indeed MCP** (a claude.ai connector) lets agents search for new openings. The [job-search-sweep](https://github.com/robinsjm2/agent-skills/blob/main/skills/job-search-sweep/SKILL.md) skill runs targeted searches, confirms remote status and pay from the full postings, and records each sweep in `~/.jobsearch/notes/sweeps/`.
 
+**Resume tailoring:** the [tailor-resume](https://github.com/robinsjm2/agent-skills/blob/main/skills/tailor-resume/SKILL.md) skill tailors a resume to one posting using only a personal fact bank, renders it to .docx, and records which resume version was used so its rules improve with each outcome.
+
 **agent-skills** holds the canonical skill definitions. `.kiro/skills/` here is a local copy.
 
 **AI agents** (Claude Code, Kiro, etc.) use this repo, especially `AGENTS.md`, as their operating instructions.
@@ -42,6 +44,7 @@ templates/               — Starting points for files in ~/.jobsearch/
   quarter-goals.md       — Quarterly goals
   job-criteria.md        — Job search criteria
   applications.md        — Application and recruiter outreach tracker
+  resume/                — Templates for the resume fact bank and tailoring lessons
 docs/                    — Setup guides (e.g. Gmail MCP)
 .kiro/steering/          — job-criteria.md: manual-inclusion steering that points agents at ~/.jobsearch/job-criteria.md
 .kiro/skills/            — Local copy of agent skills
@@ -59,6 +62,7 @@ CLAUDE.md                — Claude-specific instructions (defers to AGENTS.md)
   notes/                 — Scratch space for ideas, research, and decisions
   job-criteria.md
   applications.md
+  resume/                — fact-bank.md, lessons.md, tailored/
 ```
 
 Set it up from the templates:
@@ -68,6 +72,8 @@ mkdir -p ~/.jobsearch/sprints/archive ~/.jobsearch/goals ~/.jobsearch/notes
 cp templates/job-criteria.md templates/applications.md ~/.jobsearch/
 cp templates/quarter-goals.md ~/.jobsearch/goals/YYYY-QN.md
 cp templates/sprint.md ~/.jobsearch/sprints/YYYY-MM-DD-sprint-01.md
+mkdir -p ~/.jobsearch/resume/tailored
+cp templates/resume/*.md ~/.jobsearch/resume/
 ```
 
 Nothing in `~/.jobsearch/` is versioned or backed up by this repo. Make sure the directory is covered by Time Machine or a similar backup. For history of your sprint reviews, you can make it a private git repo of its own.

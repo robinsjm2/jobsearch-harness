@@ -20,11 +20,16 @@ This repository holds only the generic process and templates. Personal data live
   notes/              — Scratch space for ideas, research, and decisions
   job-criteria.md     — Job search criteria
   applications.md     — Application and recruiter outreach tracker
+  resume/
+    fact-bank.md      — Verified facts; the only source for tailored resumes
+    lessons.md        — Tailoring rules learned from feedback and outcomes
+    tailored/         — Tailored resumes (Markdown + .docx), one per application
 ```
 
 - The current sprint is the most recent file in `~/.jobsearch/sprints/` (not in `archive/`).
 - Create new files from `templates/` in this repository.
 - Never copy personal data into this repository.
+- Tailored resumes use only facts from `resume/fact-bank.md`; never invent or embellish experience.
 
 ## Agent Responsibilities
 
