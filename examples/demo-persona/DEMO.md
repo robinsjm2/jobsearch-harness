@@ -48,14 +48,21 @@ Shows: posting analysis, the coverage table, the "should we continue?" check-in,
 ```
 Shows: the tracker row with Status/Stage, and the lessons outcome log.
 
-### 4. Check email: `gmail-job-search` (mocked)
+### 4. Application status check: `gmail-job-search` (mocked)
+
+```
+> Any updates on my applications? Check my email and update my tracker, including anything that's missing.
+```
+Shows follow-ups on tracked applications: Tidewater Labs invites the candidate to a technical interview (Stage moves to Technical interview, flagged Action required with its deadline), and Quillstone confirms receipt. It also shows a rejection from Harborlight Media, which isn't in the tracker, being detected as an untracked application and added, plus new recruiter outreach rated against the criteria. The tracker file is updated with Status and Stage.
+
+### 5. Check email for job alerts: `gmail-job-search` (mocked)
 
 ```
 > Check my email for job alerts and replies on my applications
 ```
 Shows: a job alert filtered against the demo candidate's criteria (on-site, manager and below-floor roles dropped), a follow-up on an existing application (Tidewater technical interview, Action required), a confirmation, a form rejection (counted, tracker updated), and new recruiter outreach. All of it comes from the `demo-gmail` mock (`mocks/fixtures/emails.json`).
 
-### 5. Sprint check: Tyme (mocked)
+### 6. Sprint check: Tyme (mocked)
 
 ```
 > What's left in my sprint, and how much time did I log this week?
