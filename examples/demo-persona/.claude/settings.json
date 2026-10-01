@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__claude_ai_Indeed",
+      "Read(./**)",
+      "Write(./**)",
+      "Edit(./**)",
+      "Bash(uv run:*)",
+      "Bash(ls:*)",
+      "Bash(mkdir:*)",
+      "Bash(date:*)",
+      "Bash(textutil:*)",
+      "mcp__demo-gmail",
+      "mcp__demo-tyme"
+    ],
+    "deny": [
+      "mcp__gmail",
+      "mcp__tyme",
+      "Read(~/.jobsearch/**)",
+      "Edit(~/.jobsearch/**)",
+      "Bash(git push:*)",
+      "Bash(open:*)"
+    ]
+  },
+  "enableAllProjectMcpServers": true
+}

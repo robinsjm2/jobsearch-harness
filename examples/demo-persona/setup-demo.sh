@@ -12,6 +12,12 @@ if [ -e "$dest" ]; then
   exit 1
 fi
 mkdir -p "$dest"
-cp -R "$src/jobsearch-data" "$src/postings" "$src/CLAUDE.md" "$dest/"
+cp -R "$src/jobsearch-data" "$src/postings" "$src/mocks" "$src/CLAUDE.md" "$src/.claude" "$src/.mcp.json" "$dest/"
+# Approve only the two mock servers for this folder (local settings, never shared).
+cat > "$dest/.claude/settings.local.json" <<'JSON'
+{
+  "enabledMcpjsonServers": ["demo-gmail", "demo-tyme"]
+}
+JSON
 echo "Demo workspace ready: $dest"
 echo "Next: cd \"$dest\" && asciinema rec --idle-time-limit 2 demo.cast"

@@ -1,0 +1,23 @@
+{
+  "projects": [
+    {"id": "demo-proj-1", "name": "Job Search"},
+    {"id": "demo-proj-2", "name": "Technical Development"}
+  ],
+  "tasks": {
+    "demo-proj-1": [
+      {"id": "demo-task-1", "name": "Submit first batch of targeted applications (3-5)", "planned_duration": 5400, "completed_date": null},
+      {"id": "demo-task-2", "name": "Update LinkedIn headline and experience", "planned_duration": 3600, "completed_date": "2026-09-29 18:00:00"},
+      {"id": "demo-task-3", "name": "Prepare for Tidewater technical interview", "planned_duration": 5400, "completed_date": null}
+    ],
+    "demo-proj-2": [
+      {"id": "demo-task-4", "name": "System design practice: rate limiter", "planned_duration": 3600, "completed_date": null},
+      {"id": "demo-task-5", "name": "Two LeetCode mediums", "planned_duration": 2700, "completed_date": "2026-09-30 21:00:00"}
+    ]
+  },
+  "records": [
+    {"task_id": "demo-task-2", "date": "2026-09-29", "minutes": 70},
+    {"task_id": "demo-task-1", "date": "2026-09-30", "minutes": 95},
+    {"task_id": "demo-task-5", "date": "2026-09-30", "minutes": 50},
+    {"task_id": "demo-task-4", "date": "2026-10-01", "minutes": 40}
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "demo-gmail": {
+      "command": "uv",
+      "args": ["run", "--quiet", "--with", "mcp>=1.2,<2", "python", "mocks/demo_gmail.py"]
+    },
+    "demo-tyme": {
+      "command": "uv",
+      "args": ["run", "--quiet", "--with", "mcp>=1.2,<2", "python", "mocks/demo_tyme.py"]
+    }
+  }
+}

@@ -10,7 +10,7 @@ brew install asciinema agg
 cd ~/Projects/jobsearch-demo
 ```
 
-The workspace's `CLAUDE.md` points the skills at `./jobsearch-data/` instead of `~/.jobsearch/`, and tells Claude not to use Gmail or Tyme.
+The workspace's `CLAUDE.md` points the skills at `./jobsearch-data/` instead of `~/.jobsearch/`, and tells Claude not to use Gmail or Tyme. Its `.claude/settings.json` enforces that: Gmail, Tyme, `~/.jobsearch`, `git push` and `open` are denied, and the Indeed connector and in-folder file edits are pre-approved so recordings don't stop for permission prompts.
 
 ## Record
 
@@ -47,6 +47,24 @@ Shows: posting analysis, the coverage table, the "should we continue?" check-in,
 > I applied to Ferncrest Health
 ```
 Shows: the tracker row with Status/Stage, and the lessons outcome log.
+
+### 4. Check email: `gmail-job-search` (mocked)
+
+```
+> Check my email for job alerts and replies on my applications
+```
+Shows: a job alert filtered against Alex's criteria (on-site, manager and below-floor roles dropped), a follow-up on an existing application (Tidewater technical interview, Action required), a confirmation, a form rejection (counted, tracker updated), and new recruiter outreach. All of it comes from the `demo-gmail` mock (`mocks/fixtures/emails.json`).
+
+### 5. Sprint check: Tyme (mocked)
+
+```
+> What's left in my sprint, and how much time did I log this week?
+```
+Uses the `demo-tyme` mock (`mocks/fixtures/tyme.json`). Updates stay in memory and reset each session.
+
+## Mocked services
+
+`mocks/` contains two small MCP servers, `demo-gmail` and `demo-tyme`, with the same tool names and signatures as the real Gmail and Tyme servers, backed by fictional JSON fixtures. `.mcp.json` registers them for this workspace only. The real servers are denied in `.claude/settings.json`, so a demo can't reach real accounts. Edit the fixtures to stage different scenarios.
 
 ## Before publishing a GIF
 
