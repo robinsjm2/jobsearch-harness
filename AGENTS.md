@@ -31,6 +31,29 @@ This repository holds only the generic process and templates. Personal data live
 - Never copy personal data into this repository.
 - Tailored resumes use only facts from `resume/fact-bank.md`; never invent or embellish experience.
 
+## Backing Up the Data Directory
+
+### During setup
+
+When creating `~/.jobsearch/` (or the first time you find it isn't a git repository), ask the user whether to back it up as a **private** git repository. Don't set it up without asking. Explain the trade-off:
+
+- **Without a backup:** everything lives on one machine with no history. A lost or wiped laptop loses the tracker, the resume fact bank, and every sprint review. Accidental overwrites can't be undone.
+- **Why it must be private, never public:** the directory holds data the user wouldn't want indexed or seen by an employer or recruiter:
+  - Contact details (email, phone) and location in tailored resumes
+  - Compensation floor and target pay in the job criteria
+  - Every company applied to, and every rejection and the stage it happened at
+  - That the user is job searching at all, which their current employer could see
+  - Private notes about companies, recruiters, and interviews
+
+  A public repo is indexed and copied quickly, and deleting it later doesn't undo that.
+- **Recommended:** a private repository on the user's own GitHub account (e.g. `jobsearch-data`), named and created only with their approval. A local-only backup (e.g. Time Machine) is an acceptable alternative if the user prefers not to put this data on GitHub.
+
+Before the first push, confirm the remote is private (e.g. `gh repo view --json visibility`). Never push this directory to a public repository, and never add it as a remote, submodule, or subfolder of this harness repo.
+
+### Each session
+
+If `~/.jobsearch/` is a git repository, commit and push changes at the end of each session in which its files changed, with a short message saying what changed (e.g. "Add Toast application; update Vanta stage"). Never commit confidential information the user has said must not be recorded.
+
 ## Agent Responsibilities
 
 At the beginning of a sprint:

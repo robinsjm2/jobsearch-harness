@@ -76,10 +76,11 @@ mkdir -p ~/.jobsearch/resume/tailored
 cp templates/resume/*.md ~/.jobsearch/resume/
 ```
 
-Nothing in `~/.jobsearch/` is versioned or backed up by this repo. Make sure the directory is covered by Time Machine or a similar backup. For history of your sprint reviews, you can make it a private git repo of its own.
+Nothing in `~/.jobsearch/` is versioned or backed up by this repo. Back it up as a **private** git repository of its own (your agent will offer to set this up), or at least with Time Machine. **Never make it public:** it holds your contact details, pay targets, every application and rejection, and the fact that you're job searching. See "Backing Up the Data Directory" in `AGENTS.md`.
 
 ## Setup
 
 1. Copy `.kiro/settings/mcp.json.example` to `~/.kiro/settings/mcp.json` and fill in your Tyme and Gmail credentials. See `docs/gmail-mcp-setup.md` for Gmail.
 2. Create `~/.jobsearch/` as shown above and fill in `job-criteria.md`.
-3. Ask your agent to plan the first sprint.
+3. Decide how to back up `~/.jobsearch/`: a private git repo (recommended) or a local backup. Never a public repo.
+4. Ask your agent to plan the first sprint.
